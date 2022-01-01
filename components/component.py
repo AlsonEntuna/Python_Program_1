@@ -1,10 +1,6 @@
-from objects.entity import entity
-
 class component:
-    owner = None
-
     def __init__(self) -> None:
-        pass
+        self.owner = None
 
     def SetOwner(self, pOwner):
         self.owner = pOwner

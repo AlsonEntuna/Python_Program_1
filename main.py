@@ -2,6 +2,11 @@ import math
 import sys # system module where you can import python system functions
 import imp # importer module that can be used to reload a specific module
 import config.config_main as config_main # this custom module only executes only once on import
+from objects.entity import entity
+
+
+myEntity = entity("Alson", 100.0)
+
 
 print (f"{sys.path}")
 myList = [1, 2, 3, 4, 5]

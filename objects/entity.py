@@ -1,21 +1,23 @@
-import components.component
-
+from components.component import component
 
 class entity:
-    name = ""
-    life = 0.0
-    components = []
+    """This is an example of a documentation string lateral access through __doc__"""
+    # class attribute
+    # accessed through __class__
+    type = "entity"
 
-    def __init__(self) -> None:
-        pass
-
+    #instance attribute
     def __init__(self, pName, pLife) -> None:
-        pass
+        self.name = pName
+        self.__life = pLife
+        self.components = []
 
-    def deductHealth():
-        pass
+    def deductHealth(self, pDeduction) -> None:
+        self.__life -= pDeduction
 
-    def addComponent(self, pComponent):
+    def getHealth(self) -> float: # the -> operator means that the function is expecting a float return type
+        return self.__life
+
+    def addComponent(self, pComponent: component) -> None:
         self.components.append(pComponent)
-        component = components.component(pComponent)
         pComponent.SetOwner(self)
