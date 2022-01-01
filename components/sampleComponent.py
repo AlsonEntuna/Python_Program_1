@@ -1,6 +1,8 @@
-import components.component as component
+from components.component import component
+
 class sampleComponent(component):
+
     def __init__(self) -> None:
-        super().__init__()
+        component.__init__(self)
 
     

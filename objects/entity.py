@@ -1,4 +1,4 @@
-from components.component import component
+import components.component
 
 class entity:
     """This is an example of a documentation string lateral access through __doc__"""
@@ -18,6 +18,9 @@ class entity:
     def getHealth(self) -> float: # the -> operator means that the function is expecting a float return type
         return self.__life
 
-    def addComponent(self, pComponent: component) -> None:
+    def addComponent(self, pComponent: components.component) -> None:
         self.components.append(pComponent)
         pComponent.SetOwner(self)
+
+    def getComponentCount(self) -> int:
+        return len(self.components)

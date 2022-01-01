@@ -3,9 +3,16 @@ import sys # system module where you can import python system functions
 import imp # importer module that can be used to reload a specific module
 import config.config_main as config_main # this custom module only executes only once on import
 from objects.entity import entity
+from components.sampleComponent import sampleComponent
 
 
 myEntity = entity("Alson", 100.0)
+print (f"Player Health -> {myEntity.getHealth()}")
+print (f"Player ComponentCount -> {myEntity.getComponentCount()}")
+# adding a sample component
+tstComponent = sampleComponent()
+myEntity.addComponent(tstComponent)
+print (f"Player ComponentCount -> {myEntity.getComponentCount()}")
 
 
 print (f"{sys.path}")
