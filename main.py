@@ -35,7 +35,7 @@ def somethingToImplement():
 
 print (doSomething.__doc__)
 
-
+# using *args is having no definite number of elements to be passed in as an argument
 def greetPeople(*people):
     for person in people:
         print (f"Hell {person}")
