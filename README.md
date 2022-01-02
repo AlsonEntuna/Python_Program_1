@@ -1,2 +1,2 @@
-# Python_Program_1
+# Python Learning - Basics
 Learning exercise for Python.
