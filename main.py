@@ -1,19 +1,24 @@
-import math
-import sys  # system module where you can import python system functions
-import imp  # importer module that can be used to reload a specific module
-import config.config_main as config_main  # this custom module only executes only once on import
+# import math
+# import sys  # system module where you can import python system functions
+# import imp  # importer module that can be used to reload a specific module
+
+# from app_config import config_main as m_config
+# sys.path.append('/../objects')
+# sys.path.append('/../app_config')
+
 from objects.entity import entity
-from components.sampleComponent import sampleComponent
+from components.SampleComponent import SampleComponent
 
 myEntity = entity("Alson", 100.0)
 print(f"Player Health -> {myEntity.getHealth()}")
 print(f"Player ComponentCount -> {myEntity.getComponentCount()}")
 # adding a sample component
-tstComponent = sampleComponent()
+tstComponent = SampleComponent()
 myEntity.addComponent(tstComponent)
 print(f"Player ComponentCount -> {myEntity.getComponentCount()}")
+tstComponent.doSomething()
 
-print(f"{sys.path}")
+# print(f"{sys.path}")
 myList = [1, 2, 3, 4, 5]
 
 for elem in myList:
@@ -56,7 +61,16 @@ def modifyGlobal(strOverride):
 modifyGlobal("-override")
 print(mySampleGlobal)
 
-config_main.cfg_1 = "override-sample_1"
-config_main.cfg_2 = "override-sample_2"
 
-print(dir(config_main))  # dir prints out the directory / content of the module
+# m_config.cfg_1 = "override-sample_1"
+# m_config.cfg_2 = "override-sample_2"
+
+
+# print(dir(config_main))  # dir prints out the directory / content of the module
+
+def main():
+    pass
+
+
+if __name__ == "__main__":
+    main()

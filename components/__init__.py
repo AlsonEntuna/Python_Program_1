@@ -1,1 +1,1 @@
-print ("Initializing Component modules...")
+print ("Initializing component modules...")
