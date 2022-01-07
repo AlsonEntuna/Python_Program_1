@@ -10,13 +10,18 @@ from objects.entity import entity
 from components.SampleComponent import SampleComponent
 
 myEntity = entity("Alson", 100.0)
-print(f"Player Health -> {myEntity.getHealth()}")
+print(f"Player Health -> {myEntity.life}")
 print(f"Player ComponentCount -> {myEntity.getComponentCount()}")
 # adding a sample component
 tstComponent = SampleComponent()
 myEntity.addComponent(tstComponent)
 print(f"Player ComponentCount -> {myEntity.getComponentCount()}")
 tstComponent.doSomething()
+
+# setting health
+myEntity.printLife()
+myEntity.life = 200
+myEntity.printLife()
 
 # print(f"{sys.path}")
 myList = [1, 2, 3, 4, 5]

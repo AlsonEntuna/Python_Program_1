@@ -10,14 +10,22 @@ class entity:
     #instance attribute
     def __init__(self, name, life) -> None:
         self.name = name
-        self.__life = life
+        self._life = life
         self.components = []
 
     def deductHealth(self, deduction) -> None:
         self.__life -= deduction
 
-    def getHealth(self) -> float: # the -> operator means that the function is expecting a float return type
-        return self.__life
+    @property
+    def life(self) -> float:
+        return self._life
+
+    @life.setter
+    def life(self, value: float) -> None:
+        self._life = float(value)
+
+    def printLife(self) -> None:
+        print(f"Current Health {self._life}")
 
     def addComponent(self, component: comp) -> None:
         self.components.append(component)
