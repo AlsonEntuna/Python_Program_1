@@ -68,6 +68,28 @@ print(mySampleGlobal)
 
 # print(dir(config_main))  # dir prints out the directory / content of the module
 
+def sample_decorator(func):
+    greeting = "Hello"
+
+    def inner_func():
+        # implementing other things here alongside the function parameter
+        print("Start of inner...")
+        # calling the function parameter
+        func()
+        print("end of inner....")
+
+    return inner_func
+
+
+# calling with the decorated function
+@sample_decorator
+def main_sample_func():
+    print("main function ->>>>")
+
+
+main_sample_func()
+
+
 def main():
     pass
 
