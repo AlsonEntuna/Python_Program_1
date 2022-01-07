@@ -1,5 +1,6 @@
 import components.Component as comp
 
+# TODO: change this to proper naming
 class entity:
     """This is an example of a documentation string lateral access through __doc__"""
     # class attribute
